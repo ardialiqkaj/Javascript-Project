@@ -82,13 +82,15 @@ function game() {
       playerScore = "Something went wrong. Please refresh and restart!";
     }
     //return playerScore;
-    console.log(playerScore, computerScore);
+    console.log("Player: " + playerScore, "Computer: " + computerScore);
   }
 
   if (playerScore > computerScore) {
     return `Congratulations! You won. The result is: ${playerScore} for you and ${computerScore} for the computer`;
   } else if (playerScore < computerScore) {
     return `Sorry, you lost. The result is: ${playerScore} for you and ${computerScore} for the computer`;
+  } else {
+    return `Draw!!! The result is: ${playerScore} for you and ${computerScore} for the computer`;
   }
 }
 
