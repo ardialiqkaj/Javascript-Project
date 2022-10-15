@@ -52,7 +52,7 @@ function game() {
       } else {
         i--;
         message =
-          "Something went wrong. Please refresh and select a valid option";
+          "Please select a valid option: 'rock', 'paper' or 'scissors'!";
       }
       console.log(message);
       return message;
@@ -74,7 +74,7 @@ function game() {
     } else if (a === "Draw") {
       playerScore = playerScore;
     } else if (
-      a === "Something went wrong. Please refresh and select a valid option"
+      a === "Please select a valid option: 'rock', 'paper' or 'scissors'!"
     ) {
       playerScore = playerScore;
     } else {
