@@ -11,7 +11,7 @@ function game() {
       }
 
       computerSelection = computerPlay();
-      console.log(computerSelection);
+      //console.log(computerSelection);
 
       function playerRound() {
         var playerInput = prompt("Select rock, paper or scissors:");
@@ -21,7 +21,7 @@ function game() {
       let b = playerRound();
       playerSelection = b.toLowerCase();
 
-      console.log(playerSelection);
+      //console.log(playerSelection);
 
       if (computerSelection === playerSelection) {
         message = "Draw";
@@ -50,10 +50,11 @@ function game() {
       } else if (computerSelection === "rock" && playerSelection === "paper") {
         message = `You won because ${playerSelection} beats ${computerSelection}`;
       } else {
+        i--;
         message =
           "Something went wrong. Please refresh and select a valid option";
       }
-
+      console.log(message);
       return message;
     }
 
@@ -72,7 +73,12 @@ function game() {
       playerScore++;
     } else if (a === "Draw") {
       playerScore = playerScore;
+    } else if (
+      a === "Something went wrong. Please refresh and select a valid option"
+    ) {
+      playerScore = playerScore;
     } else {
+      //i--;
       playerScore = "Something went wrong. Please refresh and restart!";
     }
     //return playerScore;
